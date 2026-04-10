@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="container-custom flex items-center justify-between h-16 lg:h-20 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2">
           <span className="font-display text-xl lg:text-2xl font-bold text-primary-foreground">
-            Stanley <span className="text-accent">Allied</span>
+            Stanley <span className="text-accent">Allied</span> Properties
           </span>
         </Link>
 

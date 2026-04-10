@@ -29,11 +29,11 @@ const Contact = () => (
                   <p className="text-muted-foreground">+254 746 130 617</p>
                 </div>
               </a>
-              <a href="mailto:nairobitechs@gmail.com" className="flex items-start gap-4 group">
+              <a href="mailto:stanleyalliedproperties@gmail.com" className="flex items-start gap-4 group">
                 <div className="p-3 bg-accent/10 rounded-lg"><Mail className="h-5 w-5 text-accent" /></div>
                 <div>
                   <p className="font-semibold group-hover:text-accent transition-colors">Email</p>
-                  <p className="text-muted-foreground">nairobitechs@gmail.com</p>
+                  <p className="text-muted-foreground">stanleyalliedproperties@gmail.com</p>
                 </div>
               </a>
               <div className="flex items-start gap-4">

@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <h3 className="text-2xl font-bold mb-4">
-            Stanley <span className="text-accent">Allied</span>
+            Stanley <span className="text-accent">Allied</span> Properties
           </h3>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
             Premium verified properties for sale and rent in Kenya. Direct from owners — no agents, no viewing fees.
@@ -40,8 +40,8 @@ const Footer = () => (
             <a href="tel:+254746130617" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Phone className="h-4 w-4 text-accent" /> +254 746 130 617
             </a>
-            <a href="mailto:nairobitechs@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
-              <Mail className="h-4 w-4 text-accent" /> nairobitechs@gmail.com
+            <a href="mailto:stanleyalliedproperties@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <Mail className="h-4 w-4 text-accent" /> stanleyalliedproperties@gmail.com
             </a>
             <div className="flex items-start gap-2">
               <MapPin className="h-4 w-4 text-accent mt-0.5" />
