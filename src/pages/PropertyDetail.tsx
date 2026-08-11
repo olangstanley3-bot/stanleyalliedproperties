@@ -3,6 +3,7 @@ import { MapPin, Bed, Bath, Car, Ruler, ChevronLeft, Shield } from "lucide-react
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
+import Seo from "@/components/Seo";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import InquiryForm from "@/components/InquiryForm";
@@ -29,6 +30,33 @@ const PropertyDetail = () => {
 
   return (
     <div className="min-h-screen">
+      <Seo
+        title={`${property.title} | Stanley Allied Properties`}
+        description={property.description.slice(0, 155)}
+        path={`/property/${property.id}`}
+        image={property.image}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "RealEstateListing",
+          name: property.title,
+          description: property.description,
+          image: property.images,
+          url: `https://stanleyalliedproperties.lovable.app/property/${property.id}`,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: property.location,
+            addressCountry: "KE",
+          },
+          numberOfBedrooms: property.bedrooms,
+          numberOfBathroomsTotal: property.bathrooms,
+          offers: {
+            "@type": "Offer",
+            price: property.price,
+            priceCurrency: "KES",
+            availability: "https://schema.org/InStock",
+          },
+        }}
+      />
       <Navbar />
       <div className="pt-20 lg:pt-24">
         <div className="container-custom px-4 sm:px-6 lg:px-8 py-6">
@@ -48,6 +76,7 @@ const PropertyDetail = () => {
                     <button
                       key={i}
                       onClick={() => setActiveImg(i)}
+                      aria-label={`View photo ${i + 1} of ${property.title}`}
                       className={`flex-shrink-0 w-24 h-16 rounded-md overflow-hidden border-2 transition-colors ${i === activeImg ? "border-accent" : "border-transparent"}`}
                     >
                       <img src={img} alt="" className="w-full h-full object-cover" loading="lazy" />

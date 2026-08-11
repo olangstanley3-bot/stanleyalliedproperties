@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Seo from "@/components/Seo";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PropertyCard from "@/components/PropertyCard";
@@ -17,7 +18,8 @@ const Airbnb = () => {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Seo title="Airbnb & Short-Stay Rentals in Nairobi" description="Verified furnished short-stay and Airbnb apartments in Nairobi. Book directly through Stanley Allied Properties." path="/airbnb" />
+    <Navbar />
       <div className="pt-20 lg:pt-24">
         <div className="bg-primary section-padding pb-8">
           <div className="container-custom">

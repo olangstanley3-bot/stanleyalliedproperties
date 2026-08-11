@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Shield } from "lucide-react";
 import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
+import Seo from "@/components/Seo";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { propertyTypes } from "@/data/properties";
@@ -29,7 +30,8 @@ const ListProperty = () => {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Seo title="List Your Property | Owners Only" description="Own a property in Nairobi? List it with Stanley Allied Properties. We work directly with owners — no agents, no viewing fees." path="/list-property" />
+    <Navbar />
       <div className="pt-20 lg:pt-24">
         <div className="bg-primary section-padding pb-8">
           <div className="container-custom">

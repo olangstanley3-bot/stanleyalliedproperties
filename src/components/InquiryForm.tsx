@@ -21,7 +21,7 @@ const InquiryForm = ({ propertyTitle, buttonLabel = "Send Inquiry" }: InquiryFor
     const msg = `New Inquiry${propertyTitle ? ` for: ${propertyTitle}` : ""}\nName: ${form.name}\nPhone: ${form.phone}\nBudget: ${form.budget}\nMessage: ${form.message}`;
     const waLink = `https://wa.me/254746130617?text=${encodeURIComponent(msg)}`;
     window.open(waLink, "_blank");
-    toast.success("Inquiry sent! We'll get back to you shortly.");
+    toast.success("Opening WhatsApp — tap send to deliver your inquiry.");
     setForm({ name: "", phone: "", budget: "", message: "" });
   };
 
