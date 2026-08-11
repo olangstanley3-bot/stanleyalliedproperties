@@ -4,6 +4,7 @@ import { Search, Shield, Users, Eye, ChevronRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Navbar from "@/components/Navbar";
+import Seo from "@/components/Seo";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PropertyCard from "@/components/PropertyCard";
@@ -37,6 +38,25 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Seo
+        title="Stanley Allied Properties | Verified Homes in Nairobi"
+        description="Verified houses, apartments and land for sale or rent in Nairobi. No agents, no viewing fees — direct from owners."
+        path="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "RealEstateAgent",
+          name: "Stanley Allied Properties",
+          url: "https://stanleyalliedproperties.lovable.app",
+          telephone: "+254746130617",
+          email: "stanleyalliedproperties@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Nairobi",
+            addressCountry: "KE",
+          },
+          areaServed: "Nairobi, Kenya",
+        }}
+      />
       <Navbar />
 
       {/* Hero */}
@@ -102,6 +122,7 @@ const Index = () => {
       {/* Trust Badges */}
       <section className="bg-secondary section-padding">
         <div className="container-custom">
+          <h2 className="sr-only">Why choose Stanley Allied Properties</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {trustBadges.map((badge) => (
               <div key={badge.title} className="flex items-start gap-4 p-6 bg-card rounded-lg border border-border">

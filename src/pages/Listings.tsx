@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Navbar from "@/components/Navbar";
+import Seo from "@/components/Seo";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PropertyCard from "@/components/PropertyCard";
@@ -39,7 +40,8 @@ const Listings = () => {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Seo title="Properties for Sale & Rent in Nairobi" description="Browse verified apartments, houses and land for sale or rent across Nairobi. Filter by price, location and bedrooms." path="/listings" />
+    <Navbar />
       <div className="pt-20 lg:pt-24">
         <div className="bg-primary section-padding pb-8">
           <div className="container-custom">

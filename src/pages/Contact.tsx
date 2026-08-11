@@ -1,11 +1,13 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import Seo from "@/components/Seo";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import InquiryForm from "@/components/InquiryForm";
 
 const Contact = () => (
   <div className="min-h-screen">
+    <Seo title="Contact Stanley Allied Properties Nairobi" description="Talk to Stanley Allied Properties about any listing. Call, email or WhatsApp our Nairobi team for verified properties." path="/contact" />
     <Navbar />
     <div className="pt-20 lg:pt-24">
       <div className="bg-primary section-padding pb-8">
